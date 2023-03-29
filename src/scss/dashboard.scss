@@ -1,0 +1,20 @@
+
+.container {
+
+    margin: 0 auto;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+.login  {
+    padding: 5px 10px;
+    border-radius: 8px;
+    background-color: purple;
+    border: 1px solid red;
+    text-decoration: none;
+    color: white;
+}
+}

@@ -1,0 +1,23 @@
+@import "./variables.scss";
+
+.header-container {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    height: 50px;
+
+
+
+    h1 {
+        font-size: 3rem;
+        color: black;
+        z-index: 9;
+       
+
+        
+        i {
+            font-size: 3.5rem;
+            color: $primary-color;
+            margin-right: 1rem;
+        }
+    }
+}
