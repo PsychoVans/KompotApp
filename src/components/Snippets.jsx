@@ -38,15 +38,15 @@ function Snippets() {
 
   return (
     <div className="Snippets">
-      <h1>Snippets</h1>
+      <h1>Dodaj swoje zadanie.</h1>
       <div>
         <input
           type="text"
-          placeholder="Enter a task"
+          placeholder="Dodaj zadanie..."
           ref={inputRef}
           onChange={handleInputChange}
         />
-        <button onClick={handleAddTodo}>Add</button>
+        <button onClick={handleAddTodo}>Dodaj</button>
       </div>
       <ul>
         {state.todos.map((todo, index) => (
@@ -63,8 +63,8 @@ function Snippets() {
             ) : (
               <div>
                 {todo}
-                <button onClick={() => handleEdit(index, todo)}>Edit</button>
-                <button onClick={() => handleDelete(index)}>Delete</button>
+                <button onClick={() => handleEdit(index, todo)}>Edytuj</button>
+                <button onClick={() => handleDelete(index)}>Usuń</button>
               </div>
             )}
           </li>

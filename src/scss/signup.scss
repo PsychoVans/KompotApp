@@ -1,41 +1,135 @@
+// @import "./variables.scss";
+
+// .signup-container {
+//     height: 100%;
+//     display: flex;
+    
+
+    
+//     h1 {
+//         text-align: center;
+//         font-size: 4rem;
+//         text-transform: uppercase;
+
+
+//         i {
+//             font-size: 40px;
+//         }
+//     }
+
+
+// .signup-container-illustration {
+//     width: 50%;
+
+    
+
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+
+//     img {
+//         width: 100%;
+//         height: 100%;
+//     }
+//     }
+
+// .signup-container-form {
+//     width: 50%;
+    
+//     background-color: white;
+//     min-height: 100vh;
+//     border-radius: 2em;
+//     box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+//     text-align: center;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+
+//     .signup-form {
+//         display: flex;
+//         flex-direction: column;
+        
+
+
+
+//         span {
+//             margin-bottom: 2rem;
+//         }
+
+//         input {
+//             width: 500px;
+           
+//         }
+
+//         span:last-child {
+//             margin-bottom: unset;
+//         }
+
+//         button:last-of-type {
+//             font-size: 1.5rem;
+//             margin-top: 2rem;
+//             text-decoration: underline;
+//         }
+
+//         a {
+//             padding: 10px;
+//             background-color: rgb(75, 43, 75);
+//             width: 100px;
+//             align-items: center;
+//             justify-content: center;
+//             display: flex;
+//             align-self: center;
+//             text-decoration: none;
+//             font-size: 20px;
+//             border-radius: 20px;
+//             color: green;
+            
+            
+
+//         }
+
+//     }
+
+//     }
+
+// }
+
+
 @import "./variables.scss";
 
+
 .signup-container {
-    height: 100%;
-    display: flex;
+  height: 100%;
+  display: flex;
+  background: linear-gradient(to right, $primary-color, $secondary-color);
+  
+  h1 {
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: white;
     
-
-    
-    h1 {
-        text-align: center;
-        font-size: 4rem;
-        text-transform: uppercase;
-
-
-        i {
-            font-size: 40px;
-        }
+    i {
+      font-size: 40px;
+      color: black;
     }
-
-
-.signup-container-illustration {
+  }
+  
+  .signup-container-illustration {
     width: 50%;
-
-    
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    img {
-        width: 100%;
-        height: 100%;
-    }
-    }
-
-.signup-container-form {
-    width: 50%;
     
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  
+  .signup-container-form {
+    width: 50%;
     background-color: white;
     min-height: 100vh;
     border-radius: 2em;
@@ -45,52 +139,47 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    
     .signup-form {
+      display: flex;
+      flex-direction: column;
+      
+      span {
+        margin-bottom: 2rem;
+      }
+      
+      input {
+        width: 500px;
+      }
+      
+      span:last-child {
+        margin-bottom: unset;
+      }
+      
+      button:last-of-type {
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        text-decoration: underline;
+      }
+      
+      a {
+        padding: 10px;
+        background-color: $primary-color;
+        width: 100px;
+        align-items: center;
+        justify-content: center;
         display: flex;
-        flex-direction: column;
+        align-self: center;
+        text-decoration: none;
+        font-size: 20px;
+        border-radius: 20px;
+        color: green;
+        margin-top: 2rem;
         
-
-
-
-        span {
-            margin-bottom: 2rem;
+        .pi {
+          margin-right: 0.5rem;
         }
-
-        input {
-            width: 500px;
-           
-        }
-
-        span:last-child {
-            margin-bottom: unset;
-        }
-
-        button:last-of-type {
-            font-size: 1.5rem;
-            margin-top: 2rem;
-            text-decoration: underline;
-        }
-
-        a {
-            padding: 10px;
-            background-color: rgb(75, 43, 75);
-            width: 100px;
-            align-items: center;
-            justify-content: center;
-            display: flex;
-            align-self: center;
-            text-decoration: none;
-            font-size: 20px;
-            border-radius: 20px;
-            color: green;
-            
-            
-
-        }
-
+      }
     }
-
-    }
-
+  }
 }
