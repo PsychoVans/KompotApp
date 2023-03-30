@@ -1,4 +1,4 @@
-import React, { useReducer, useRef } from 'react';
+import React, { useReducer, useRef, useState } from 'react';
 import './../scss/snippets.scss';
 
 function Snippets() {
@@ -7,6 +7,7 @@ function Snippets() {
     todos: []
   });
 
+  const [editIndex, setEditIndex] = useState(-1);
   const inputRef = useRef(null);
 
   function handleAddTodo() {
@@ -18,6 +19,17 @@ function Snippets() {
 
   function handleDelete(index) {
     dispatch({ type: 'DELETE_TODO', payload: index });
+  }
+
+  function handleEdit(index, value) {
+    setEditIndex(index);
+    inputRef.current.value = value;
+  }
+
+  function handleSave(index, value) {
+    dispatch({ type: 'EDIT_TODO', payload: { index, value } });
+    setEditIndex(-1);
+    inputRef.current.value = '';
   }
 
   function handleInputChange(e) {
@@ -39,8 +51,22 @@ function Snippets() {
       <ul>
         {state.todos.map((todo, index) => (
           <li key={index}>
-            {todo}
-            <button onClick={() => handleDelete(index)}>Delete</button>
+            {editIndex === index ? (
+              <div>
+                <input
+                  type="text"
+                  defaultValue={todo}
+                  ref={inputRef}
+                />
+                <button onClick={() => handleSave(index, inputRef.current.value)}>Save</button>
+              </div>
+            ) : (
+              <div>
+                {todo}
+                <button onClick={() => handleEdit(index, todo)}>Edit</button>
+                <button onClick={() => handleDelete(index)}>Delete</button>
+              </div>
+            )}
           </li>
         ))}
       </ul>
@@ -58,6 +84,17 @@ function reducer(state, action) {
       return {
         ...state,
         todos: state.todos.filter((todo, index) => index !== action.payload)
+      };
+    case 'EDIT_TODO':
+      const { index, value } = action.payload;
+      return {
+        ...state,
+        todos: state.todos.map((todo, i) => {
+          if (i === index) {
+            return value;
+          }
+          return todo;
+        })
       };
     default:
       return state;
