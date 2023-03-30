@@ -1,12 +1,20 @@
-
-.container {
-
-    margin: 0 auto;
-    width: 500px;
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+    .container {
+    width: 50%;
+    
+    background-color: white;
+    min-height: 100vh;
+    border-radius: 2em;
+    box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+    text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
 
 .login  {
@@ -16,5 +24,6 @@
     border: 1px solid red;
     text-decoration: none;
     color: white;
+}
 }
 }

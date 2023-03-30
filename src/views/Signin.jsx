@@ -2,7 +2,7 @@
 import { InputText } from 'primereact/inputtext'
 import { Password } from 'primereact/password'
 import { Button } from 'primereact/button'
-import { Toast } from 'primereact/Toast'
+
 
 import illustration from "../assets/work-pressure.svg";
 
@@ -20,17 +20,15 @@ function Signin() {
             <form className='signup-form'>
                 <span className='p-input-icon-left'>
                     <i className="pi pi-envelope"></i>
-                    <InputText placeholder="Email" />
+                    <InputText className='p-inputtext-lg' placeholder="Email" />
                 </span>
-                <span className='p-input-icon-left'>
-                    <i className="pi pi-lock"></i>
-                    <Password/>
+                <span>
+                    <Password className='p-inputtext-lg' placeholder="Password" toggleMask />
                 </span>
-                <span className='p-input-icon-left'>
-                    <i className="pi pi-lock"></i>
-                    <Password/>
+                <span>
+                    <Password className='p-inputtext-lg' placeholder="Re-Enter Password" toggleMask/>
                 </span>
-                <Button label="Sign in" serverity="help" />
+                <a href="/snippets" >Sign In</a> 
                 <Button label="Already have account?" serverity="info" text />
             </form>
         </div>
