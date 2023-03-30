@@ -1,29 +1,65 @@
+// .main {
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+ 
+//     .container {
+//     width: 50%;
+    
+//     background-color: white;
+//     min-height: 100vh;
+//     border-radius: 2em;
+//     box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+//     text-align: center;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+//     justify-content: center;
+
+
+// .login  {
+//     padding: 5px 10px;
+//     border-radius: 8px;
+//     background-color: purple;
+//     border: 1px solid red;
+//     text-decoration: none;
+//     color: white;
+// }
+// }
+// }
+
+
+
 .main {
     display: flex;
     align-items: center;
     justify-content: center;
- 
+  
     .container {
-    width: 50%;
-    
-    background-color: white;
-    min-height: 100vh;
-    border-radius: 2em;
-    box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+        width: 50%;
+        font-size: 15px;
 
-
-.login  {
-    padding: 5px 10px;
-    border-radius: 8px;
-    background-color: purple;
-    border: 1px solid red;
-    text-decoration: none;
-    color: white;
-}
-}
-}
+      background: linear-gradient(to bottom, #ffffff, #f2f2f2); 
+      min-height: 100vh;
+      background-size: cover; 
+      background-image: url("../assets/rower.jpg");
+      border-radius: 2em;
+      box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  
+      .login {
+        padding: 5px 10px;
+        border-radius: 8px;
+        background: linear-gradient(to bottom, #ff80b3, #cc0066);
+        border: 1px solid red;
+        text-decoration: none;
+        color: white;
+        box-shadow: 0 0.188em 0.625em rgb(156, 156, 156); 
+      }
+    }
+  }
+  

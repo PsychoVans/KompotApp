@@ -1,11 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
-
+import Navbar from "./components/navbar";
 import Header from "./components/Header";
 import Snippets from "./components/Snippets";
 
 import Dashboard from "./views/Dasboard";
 import SignUp from "./views/Signup";
 import Signin from "./views/Signin";
+
+
 
 
 function App() {
